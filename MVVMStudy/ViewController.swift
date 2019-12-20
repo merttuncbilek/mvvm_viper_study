@@ -15,6 +15,13 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-
+    @IBAction func actionOpenViperController(_ sender: Any) {
+        
+        if let postsViperContainer = PostsWireFrame.createPostsView() {
+            self.navigationController?.pushViewController(postsViperContainer, animated: true)
+        }
+        
+    }
+    
 }
 
