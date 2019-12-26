@@ -22,7 +22,7 @@ class RemoteDataSource {
     
     func getFromApi<T: BaseMappable>(_ dump: T.Type, method: String, onResponse: @escaping ((Bool, T?, Error?) -> Void)) {
         AF.request(baseURL.appending(method), method: .get).responseString{ response in
-            guard let json = response.value as? String else {
+            guard let json = response.value else {
                 onResponse(false, nil, nil)
                 return
             }

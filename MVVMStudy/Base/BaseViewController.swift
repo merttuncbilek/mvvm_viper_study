@@ -17,6 +17,16 @@ class BaseViewController: UIViewController {
         activityIndicatorView = UIActivityIndicatorView(style: .medium)
         activityIndicatorView?.frame = self.view.frame
     }
+    
+    func observeError() {
+        
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        self.observeError()
+    }
 }
 
 extension BaseViewController: BaseViewProtocol {

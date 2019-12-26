@@ -29,6 +29,8 @@ class ProductDetailViewController: BaseViewController {
 extension ProductDetailViewController: ProductDetailViewToPresenterProtocol {
     
     func showProductDetail(_ productDetail: ProductDetail) {
+        self.title = productDetail.name ?? ""
+        
         self.labelProductName.text = productDetail.name ?? ""
         self.labelPrice.text = "\(productDetail.price ?? 0)"
         self.labelDescription.text = productDetail.description ?? ""
