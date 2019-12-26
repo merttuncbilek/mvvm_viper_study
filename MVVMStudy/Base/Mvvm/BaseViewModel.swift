@@ -8,23 +8,35 @@
 
 import Foundation
 
-protocol BaseViewModelProtocol {
+protocol BaseViewModelProtocol: class {
     var error: Observable<String> {get set}
     var navigationEvent: Observable<NavigationEvent> {get set}
     
+    associatedtype Model
+    var model: Model {get set}
+
     init()
 }
 
-class BaseViewModel: BaseViewModelProtocol {
+class BaseViewModel<M>: BaseViewModelProtocol where M: BaseModelProtocol {
+    
+    var model: M
+    
+    required init() {
+        self.model = M()
+        
+        self.setUpObserves()
+        
+        self.model.observableError.observe = { error in
+            self.error.value = error
+        }
+    }
     
     var error = Observable<String>()
     var navigationEvent = Observable<NavigationEvent>()
     
-    required init() {
-        self.observeError()
+    func setUpObserves() {
+        fatalError("This function must be implemented")
     }
     
-    func observeError() {
-        
-    }
 }

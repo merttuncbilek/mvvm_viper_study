@@ -9,7 +9,6 @@
 import Foundation
 
 protocol ProductDetailViewModelProtocol: BaseViewModelProtocol {
-    var productDetailModel: ProductDetailModelProtocol {get set}
     var productDetail: Observable<ProductDetail> {get set}
     
     func getProductDetail(id: String)

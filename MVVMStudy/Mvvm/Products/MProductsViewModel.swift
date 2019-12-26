@@ -8,34 +8,23 @@
 
 import Foundation
 
-class MProductsViewModel: BaseViewModel, MProductsViewModelProtocol {
+class MProductsViewModel: BaseViewModel<MProductsModel>, MProductsViewModelProtocol {
    
-    var productsModel: MProductsModelProtocol = MProductsModel()
-    
     var products = Observable<[Product]>()
     
-    required init() {
-        super.init()
-        
-        productsModel.productsResponse.observe = { productResponse in
+    override func setUpObserves() {
+        model.productsResponse.observe = { productResponse in
             if let products = productResponse.products {
                 self.products.value = products
             }
         }
     }
     
-    override func observeError() {
-        productsModel.observableError.observe = { error in
-            self.error.value = error
-        }
-    }
-    
     func fetchPosts() {
-        productsModel.fetchProductsData()
+        model.fetchProductsData()
     }
     
     func onProductItemSelected(at index: Int) {
         self.navigationEvent.value = NavigationEvent.init(target: .ProductDetail, payload: products.value[index].product_id as AnyObject?)
     }
 }
-

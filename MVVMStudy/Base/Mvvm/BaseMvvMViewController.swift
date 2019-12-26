@@ -13,14 +13,14 @@ class BaseMvvMViewController<VM: BaseViewModelProtocol>: BaseViewController {
     
     var viewModel: VM?
     
-    func initializeViewModel<VM>() -> VM where VM: BaseViewModelProtocol {
-        return VM.init()
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        self.viewModel = VM.init()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.viewModel = self.initializeViewModel()
-        
+    
         self.viewModel?.error.observe = { error in
             super.showMessage(error)
         }

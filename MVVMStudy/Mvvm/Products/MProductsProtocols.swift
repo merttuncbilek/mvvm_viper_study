@@ -9,8 +9,6 @@
 import Foundation
 
 protocol MProductsViewModelProtocol: BaseViewModelProtocol {
-    
-    var productsModel: MProductsModelProtocol {get set}
     var products: Observable<[Product]> {get set}
     
     func fetchPosts()

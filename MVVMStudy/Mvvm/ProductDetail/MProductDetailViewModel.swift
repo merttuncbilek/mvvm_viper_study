@@ -8,25 +8,17 @@
 
 import Foundation
 
-class MProductDetailViewModel: BaseViewModel, ProductDetailViewModelProtocol {
+class MProductDetailViewModel: BaseViewModel<MProductDetailModel>, ProductDetailViewModelProtocol {
     
-    var productDetailModel: ProductDetailModelProtocol = MProductDetailModel()
     var productDetail = Observable<ProductDetail>()
     
-    required init() {
-        super.init()
-        productDetailModel.productDetail.observe = { productDetail in
+    override func setUpObserves() {
+        model.productDetail.observe = { productDetail in
             self.productDetail.value = productDetail
         }
     }
     
-    override func observeError() {
-        productDetailModel.observableError.observe = { error in
-            super.error.value = error
-        }
-    }
-    
     func getProductDetail(id: String) {
-        productDetailModel.getProductDetail(id: id)
+        model.getProductDetail(id: id)
     }
 }
