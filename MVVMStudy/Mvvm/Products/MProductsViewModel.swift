@@ -14,7 +14,7 @@ class MProductsViewModel: BaseViewModel, MProductsViewModelProtocol {
     
     var products = Observable<[Product]>()
     
-    override init() {
+    required init() {
         super.init()
         
         productsModel.productsResponse.observe = { productResponse in

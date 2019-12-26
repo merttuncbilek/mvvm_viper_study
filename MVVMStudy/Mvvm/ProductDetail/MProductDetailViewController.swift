@@ -10,21 +10,19 @@ import Foundation
 import UIKit
 import Kingfisher
 
-class MProductDetailViewController: BaseViewController {
+class MProductDetailViewController: BaseMvvMViewController<MProductDetailViewModel> {
     
     @IBOutlet weak var imageProduct: UIImageView!
     @IBOutlet weak var labelProductName: UILabel!
     @IBOutlet weak var labelPrice: UILabel!
     @IBOutlet weak var labelDescription: UILabel!
     
-    var productDetailViewModel: ProductDetailViewModelProtocol = MProductDetailViewModel()
-    
     var productId: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        productDetailViewModel.productDetail.observe = { productDetail in
+        viewModel?.productDetail.observe = { productDetail in
             super.dismissProgress()
             self.title = productDetail.name ?? ""
             self.labelProductName.text = productDetail.name ?? ""
@@ -41,13 +39,7 @@ class MProductDetailViewController: BaseViewController {
         
         if let productId = productId {
             super.showProgress()
-            productDetailViewModel.getProductDetail(id: productId)
-        }
-    }
-    
-    override func observeError() {
-        productDetailViewModel.error.observe = { error in
-            super.showMessage(error)
+            viewModel?.getProductDetail(id: productId)
         }
     }
     

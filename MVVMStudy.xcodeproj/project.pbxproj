@@ -213,9 +213,9 @@
 			isa = PBXGroup;
 			children = (
 				8548F3A323B370B900E08E9D /* MProductDetailViewController.swift */,
-				8548F3A523B370E700E08E9D /* MProductDetailProtocols.swift */,
 				8548F3A923B3745C00E08E9D /* MProductDetailViewModel.swift */,
 				8548F3AB23B37CD200E08E9D /* MProductDetailModel.swift */,
+				8548F3A523B370E700E08E9D /* MProductDetailProtocols.swift */,
 			);
 			path = ProductDetail;
 			sourceTree = "<group>";

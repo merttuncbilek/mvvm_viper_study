@@ -13,7 +13,7 @@ class MProductDetailViewModel: BaseViewModel, ProductDetailViewModelProtocol {
     var productDetailModel: ProductDetailModelProtocol = MProductDetailModel()
     var productDetail = Observable<ProductDetail>()
     
-    override init() {
+    required init() {
         super.init()
         productDetailModel.productDetail.observe = { productDetail in
             self.productDetail.value = productDetail

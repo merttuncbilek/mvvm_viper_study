@@ -14,7 +14,7 @@ class BaseMvvMViewController<VM: BaseViewModelProtocol>: BaseViewController {
     var viewModel: VM?
     
     func initializeViewModel<VM>() -> VM where VM: BaseViewModelProtocol {
-        fatalError("The ViewModel must be initialized")
+        return VM.init()
     }
     
     override func viewDidLoad() {

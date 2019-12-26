@@ -37,15 +37,6 @@ class MProductsViewController: BaseMvvMViewController<MProductsViewModel> {
         self.title = "PRODUCTS"
     }
     
-    override func initializeViewModel<VM>() -> VM where VM : BaseViewModelProtocol {
-        return MProductsViewModel() as! VM
-    }
-    
-    override func observeError() {
-        self.viewModel?.error.observe = { error in
-            super.showMessage(error)
-        }
-    }
 }
 
 extension MProductsViewController: ProductsTableViewAdapterDelegate {

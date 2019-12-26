@@ -11,6 +11,8 @@ import Foundation
 protocol BaseViewModelProtocol {
     var error: Observable<String> {get set}
     var navigationEvent: Observable<NavigationEvent> {get set}
+    
+    init()
 }
 
 class BaseViewModel: BaseViewModelProtocol {
@@ -18,7 +20,7 @@ class BaseViewModel: BaseViewModelProtocol {
     var error = Observable<String>()
     var navigationEvent = Observable<NavigationEvent>()
     
-    init() {
+    required init() {
         self.observeError()
     }
     
