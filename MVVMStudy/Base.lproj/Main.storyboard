@@ -41,10 +41,10 @@
             </objects>
             <point key="canvasLocation" x="615.94202898550725" y="137.94642857142856"/>
         </scene>
-        <!--Posts View Controller-->
+        <!--Products View Controller-->
         <scene sceneID="Wfj-8h-PoL">
             <objects>
-                <viewController storyboardIdentifier="PostsViewController" id="Db9-uR-nQn" customClass="PostsViewController" customModule="MVVMStudy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProductsViewController" id="Db9-uR-nQn" customClass="ProductsViewController" customModule="MVVMStudy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="w6b-tL-IMC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

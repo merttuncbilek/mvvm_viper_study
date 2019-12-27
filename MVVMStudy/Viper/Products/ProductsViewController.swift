@@ -1,5 +1,5 @@
 //
-//  PostsViewController.swift
+//  ProductsViewController.swift
 //  MVVMStudy
 //
 //  Created by Mert TUNÇBİLEK on 17.12.2019.
@@ -10,11 +10,11 @@ import Foundation
 import UIKit
 import Kingfisher
 
-class PostsViewController: BaseViewController {
+class ProductsViewController: BaseViewController {
     
     @IBOutlet weak var tableViewProducts: UITableView!
     
-    var presenter: PostsPresenterToViewProtocol?
+    var presenter: ProductsPresenterToViewProtocol?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,18 +25,18 @@ class PostsViewController: BaseViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         self.title = "PRODUCTS"
-        presenter?.fetchPosts()
+        presenter?.fetchProducts()
     }
 }
 
-extension PostsViewController: PostsViewToPresenterProtocol {
-    func postsFetched(productResponse: ProductsResponse) {
+extension ProductsViewController: ProductsViewToPresenterProtocol {
+    func productsFetched(productResponse: ProductsResponse) {
         tableViewProducts.reloadData()
     }
     
 }
 
-extension PostsViewController: UITableViewDataSource, UITableViewDelegate {
+extension ProductsViewController: UITableViewDataSource, UITableViewDelegate {
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1

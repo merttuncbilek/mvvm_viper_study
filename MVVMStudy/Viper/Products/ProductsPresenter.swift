@@ -1,5 +1,5 @@
 //
-//  PostsPresenter.swift
+//  ProductsPresenter.swift
 //  MVVMStudy
 //
 //  Created by Mert TUNÇBİLEK on 17.12.2019.
@@ -8,10 +8,10 @@
 
 import Foundation
 
-class PostsPresenter: BasePresenter {
-    var view: PostsViewToPresenterProtocol?
-    var wireFrame: PostsWireFrameToPresenterProtocol?
-    var interactor: PostsInteractorToPresenterProcotol?
+class ProductsPresenter: BasePresenter {
+    var view: ProductsViewToPresenterProtocol?
+    var wireFrame: ProductsWireFrameToPresenterProtocol?
+    var interactor: ProductsInteractorToPresenterProcotol?
     
     internal var products = [Product]()
     
@@ -21,11 +21,11 @@ class PostsPresenter: BasePresenter {
     }
 }
 
-extension PostsPresenter: PostsPresenterToViewProtocol {
+extension ProductsPresenter: ProductsPresenterToViewProtocol {
     
-    func fetchPosts() {
+    func fetchProducts() {
         self.view?.showProgress()
-        interactor?.fetchPostsData()
+        interactor?.fetchProductsData()
     }
     
     func numberOfProducts() -> Int {
@@ -44,12 +44,12 @@ extension PostsPresenter: PostsPresenterToViewProtocol {
     }
 }
 
-extension PostsPresenter: PostsPresenterToInteractorProtocol {
+extension ProductsPresenter: ProductsPresenterToInteractorProtocol {
     
-    func onPostsDataReceived(productResponse: ProductsResponse) {
+    func onProductsDataReceived(productResponse: ProductsResponse) {
         self.products = productResponse.products ?? [Product]()
         view?.dismissProgress()
-        view?.postsFetched(productResponse: productResponse)
+        view?.productsFetched(productResponse: productResponse)
     }
     
     

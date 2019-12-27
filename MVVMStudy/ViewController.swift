@@ -17,8 +17,8 @@ class ViewController: UIViewController {
 
     @IBAction func actionOpenViperController(_ sender: Any) {
         
-        if let postsViperContainer = PostsWireFrame.createPostsView() {
-            self.navigationController?.pushViewController(postsViperContainer, animated: true)
+        if let productsViperContainer = ProductsWireFrame.createProductsView() {
+            self.navigationController?.pushViewController(productsViperContainer, animated: true)
         }
         
     }
