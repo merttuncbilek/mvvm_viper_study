@@ -13,18 +13,18 @@ class ProductsWireFrame: BaseWireFrame {
     
     static func createProductsView() -> UIViewController? {
         let storyboard = super.getStoryBoard(with: "Main")
-        if let ProductsViewController = storyboard.instantiateViewController(identifier: "ProductsViewController") as? ProductsViewController {
+        if let productsViewController = storyboard.instantiateViewController(identifier: "ProductsViewController") as? ProductsViewController {
             var presenter: ProductsPresenterToInteractorProtocol & ProductsPresenterToViewProtocol = ProductsPresenter()
             let wireFrame: ProductsWireFrameToPresenterProtocol = ProductsWireFrame()
             var interactor: ProductsInteractorToPresenterProcotol = ProductsInteractor()
             
-            presenter.view = ProductsViewController
+            presenter.view = productsViewController
             presenter.wireFrame = wireFrame
             presenter.interactor = interactor
-            ProductsViewController.presenter = presenter
+            productsViewController.presenter = presenter
             interactor.presenter = presenter
             
-            return ProductsViewController
+            return productsViewController
         }
         
         return nil
