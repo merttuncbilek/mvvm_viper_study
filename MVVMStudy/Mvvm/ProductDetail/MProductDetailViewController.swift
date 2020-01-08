@@ -22,7 +22,13 @@ class MProductDetailViewController: BaseMvvMViewController<MProductDetailViewMod
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        viewModel?.productDetail.observe = { productDetail in
+        let productDetailBond = Bond<ProductDetail>() { productDetail in
+            
+        }
+        
+        productDetailBond.bind(observable: viewModel.productDetail)
+        
+        viewModel.productDetail.observe = { productDetail in
             super.dismissProgress()
             self.title = productDetail.name ?? ""
             self.labelProductName.text = productDetail.name ?? ""
@@ -39,7 +45,7 @@ class MProductDetailViewController: BaseMvvMViewController<MProductDetailViewMod
         
         if let productId = productId {
             super.showProgress()
-            viewModel?.getProductDetail(id: productId)
+            viewModel.getProductDetail(id: productId)
         }
     }
     

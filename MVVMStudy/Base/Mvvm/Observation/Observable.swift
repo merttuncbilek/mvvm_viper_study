@@ -13,10 +13,13 @@ class Observable<T> {
     var value: T! {
         didSet {
             DispatchQueue.main.async {
+                self.bond?.listener(self.value)
                 self.observe?(self.value)
             }
         }
     }
+    
+    weak var bond: Bond<T>?
     
     var observe: ((T) -> Void)?
 }

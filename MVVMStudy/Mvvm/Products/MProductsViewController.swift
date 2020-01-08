@@ -18,7 +18,7 @@ class MProductsViewController: BaseMvvMViewController<MProductsViewModel> {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        viewModel?.products.observe = { products in
+        viewModel.products.observe = { products in
             super.dismissProgress()
             
             self.productsTableViewAdapter.products = products
@@ -30,7 +30,7 @@ class MProductsViewController: BaseMvvMViewController<MProductsViewModel> {
         self.tableViewProducts.dataSource = self.productsTableViewAdapter
         
         super.showProgress()
-        viewModel?.fetchPosts()
+        viewModel.fetchPosts()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -42,7 +42,7 @@ class MProductsViewController: BaseMvvMViewController<MProductsViewModel> {
 extension MProductsViewController: ProductsTableViewAdapterDelegate {
     
     func onItemSelected(at index: Int) {
-        viewModel?.onProductItemSelected(at: index)
+        viewModel.onProductItemSelected(at: index)
     }
     
 }

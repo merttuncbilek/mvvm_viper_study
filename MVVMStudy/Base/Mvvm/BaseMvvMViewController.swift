@@ -11,21 +11,21 @@ import UIKit
 
 class BaseMvvMViewController<VM: BaseViewModelProtocol>: BaseViewController {
     
-    var viewModel: VM?
+    var viewModel: VM
     
     required init?(coder: NSCoder) {
-        super.init(coder: coder)
         self.viewModel = VM.init()
+        super.init(coder: coder)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
     
-        self.viewModel?.error.observe = { error in
+        self.viewModel.error.observe = { error in
             super.showMessage(error)
         }
         
-        self.viewModel?.navigationEvent.observe = { navigation in
+        self.viewModel.navigationEvent.observe = { navigation in
             self.performSegue(withIdentifier: navigation.target.rawValue, sender: navigation.payload)
         }
         

@@ -99,6 +99,7 @@
 		8548F3F423B4C9B500E08E9D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857345F423A2549B00EF36F1 /* AppDelegate.swift */; };
 		8548F3F523B4C9B500E08E9D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857345F823A2549B00EF36F1 /* ViewController.swift */; };
 		8548F3F623B4C9B500E08E9D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8548F37523AA669A00E08E9D /* Constants.swift */; };
+		8548F3FB23BE205100E08E9D /* Binding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8548F3FA23BE205100E08E9D /* Binding.swift */; };
 		857345F523A2549B00EF36F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857345F423A2549B00EF36F1 /* AppDelegate.swift */; };
 		857345F723A2549B00EF36F1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857345F623A2549B00EF36F1 /* SceneDelegate.swift */; };
 		857345F923A2549B00EF36F1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857345F823A2549B00EF36F1 /* ViewController.swift */; };
@@ -169,6 +170,7 @@
 		8548F3AB23B37CD200E08E9D /* MProductDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MProductDetailModel.swift; sourceTree = "<group>"; };
 		8548F3AF23B3993D00E08E9D /* NavigationEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationEvent.swift; sourceTree = "<group>"; };
 		8548F3B123B39D8200E08E9D /* BaseMvvMViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseMvvMViewController.swift; sourceTree = "<group>"; };
+		8548F3FA23BE205100E08E9D /* Binding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Binding.swift; sourceTree = "<group>"; };
 		857345F123A2549B00EF36F1 /* MVVMStudy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVVMStudy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		857345F423A2549B00EF36F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		857345F623A2549B00EF36F1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -299,13 +301,22 @@
 		8548F3AE23B397B300E08E9D /* Mvvm */ = {
 			isa = PBXGroup;
 			children = (
-				8548F39C23B0E14400E08E9D /* Observable.swift */,
+				8548F3F923BE203500E08E9D /* Observation */,
 				8548F3A023B35AA700E08E9D /* BaseViewModel.swift */,
 				8548F3A723B3712200E08E9D /* BaseModel.swift */,
 				8548F3AF23B3993D00E08E9D /* NavigationEvent.swift */,
 				8548F3B123B39D8200E08E9D /* BaseMvvMViewController.swift */,
 			);
 			path = Mvvm;
+			sourceTree = "<group>";
+		};
+		8548F3F923BE203500E08E9D /* Observation */ = {
+			isa = PBXGroup;
+			children = (
+				8548F39C23B0E14400E08E9D /* Observable.swift */,
+				8548F3FA23BE205100E08E9D /* Binding.swift */,
+			);
+			path = Observation;
 			sourceTree = "<group>";
 		};
 		857345E823A2549B00EF36F1 = {
@@ -698,6 +709,7 @@
 				8548F39423AD088A00E08E9D /* MProductsViewController.swift in Sources */,
 				8548F3A123B35AA700E08E9D /* BaseViewModel.swift in Sources */,
 				8548F38D23ACB15800E08E9D /* ProductDetailInteractor.swift in Sources */,
+				8548F3FB23BE205100E08E9D /* Binding.swift in Sources */,
 				8548F38B23ACB14900E08E9D /* ProductDetailPresenter.swift in Sources */,
 				8548F3AC23B37CD200E08E9D /* MProductDetailModel.swift in Sources */,
 				8573463623A9126200EF36F1 /* ProductsPresenter.swift in Sources */,
