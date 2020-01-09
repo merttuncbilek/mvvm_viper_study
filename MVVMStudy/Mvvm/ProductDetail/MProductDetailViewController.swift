@@ -19,24 +19,31 @@ class MProductDetailViewController: BaseMvvMViewController<MProductDetailViewMod
     
     var productId: String?
     
+    var productDetailBond: Bond<ProductDetail>?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         let productDetailBond = Bond<ProductDetail>() { productDetail in
-            
+            super.dismissProgress()
+            self.setUIElements(with: productDetail)
         }
         
         productDetailBond.bind(observable: viewModel.productDetail)
         
+//        viewModel.productDetail.observers.append({[weak self] productDetail in
+//            self?.dismissProgress()
+//            self?.setUIElements(with: productDetail)
+//        })
+        
+        viewModel.productDetail ->> {[weak self] productDetail in
+            self?.dismissProgress()
+            self?.setUIElements(with: productDetail)
+        }
+        
         viewModel.productDetail.observe = { productDetail in
-            super.dismissProgress()
-            self.title = productDetail.name ?? ""
-            self.labelProductName.text = productDetail.name ?? ""
-            self.labelPrice.text = "\(productDetail.price ?? 0)"
-            self.labelDescription.text = productDetail.description ?? ""
-            if let url = URL(string: productDetail.image ?? "") {
-                self.imageProduct.kf.setImage(with: ImageResource(downloadURL: url, cacheKey: productDetail.name))
-            }
+//            super.dismissProgress()
+//            self.setUIElements(with: productDetail)
         }
     }
     
@@ -49,4 +56,13 @@ class MProductDetailViewController: BaseMvvMViewController<MProductDetailViewMod
         }
     }
     
+    fileprivate func setUIElements(with productDetail: ProductDetail) {
+        self.title = productDetail.name ?? ""
+        self.labelProductName.text = productDetail.name ?? ""
+        self.labelPrice.text = "\(productDetail.price ?? 0)"
+        self.labelDescription.text = productDetail.description ?? ""
+        if let url = URL(string: productDetail.image ?? "") {
+            self.imageProduct.kf.setImage(with: ImageResource(downloadURL: url, cacheKey: productDetail.name))
+        }
+    }
 }

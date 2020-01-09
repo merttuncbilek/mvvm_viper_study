@@ -8,18 +8,22 @@
 
 import Foundation
 
+typealias Observer<T> = (T) -> Void
+
 class Observable<T> {
     
     var value: T! {
         didSet {
             DispatchQueue.main.async {
-                self.bond?.listener(self.value)
+                for observer in self.observers {
+                    observer(self.value)
+                }
                 self.observe?(self.value)
             }
         }
     }
     
-    weak var bond: Bond<T>?
+    var observers = [Observer<T>]()
     
     var observe: ((T) -> Void)?
 }

@@ -17,6 +17,13 @@ class Bond<T> {
     }
     
     func bind(observable: Observable<T>) {
-        observable.bond = self
+        //observable.bondBox.append(BondBox(self))
+    }
+}
+
+class BondBox<T> {
+    weak var bond: Bond<T>?
+    init(_ bond: Bond<T>) {
+        self.bond = bond
     }
 }
