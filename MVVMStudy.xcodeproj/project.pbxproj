@@ -99,7 +99,6 @@
 		8548F3F423B4C9B500E08E9D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857345F423A2549B00EF36F1 /* AppDelegate.swift */; };
 		8548F3F523B4C9B500E08E9D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857345F823A2549B00EF36F1 /* ViewController.swift */; };
 		8548F3F623B4C9B500E08E9D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8548F37523AA669A00E08E9D /* Constants.swift */; };
-		8548F3FB23BE205100E08E9D /* Binding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8548F3FA23BE205100E08E9D /* Binding.swift */; };
 		857345F523A2549B00EF36F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857345F423A2549B00EF36F1 /* AppDelegate.swift */; };
 		857345F723A2549B00EF36F1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857345F623A2549B00EF36F1 /* SceneDelegate.swift */; };
 		857345F923A2549B00EF36F1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857345F823A2549B00EF36F1 /* ViewController.swift */; };
@@ -119,6 +118,9 @@
 		858DC8B123C7629D000041AC /* CustomFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858DC8B023C7629D000041AC /* CustomFunctions.swift */; };
 		858DC8B223C7629D000041AC /* CustomFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858DC8B023C7629D000041AC /* CustomFunctions.swift */; };
 		858DC8B323C7629D000041AC /* CustomFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858DC8B023C7629D000041AC /* CustomFunctions.swift */; };
+		858DC8B523C895C4000041AC /* MProductsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858DC8B423C895C3000041AC /* MProductsViewModelTests.swift */; };
+		858DC8B623C895C4000041AC /* MProductsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858DC8B423C895C3000041AC /* MProductsViewModelTests.swift */; };
+		858DC8B723C895C4000041AC /* MProductsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858DC8B423C895C3000041AC /* MProductsViewModelTests.swift */; };
 		D644A53DC41F1B378D8D195C /* Pods_MVVMStudy_MVVMStudyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B00FE41AB258F2DB57F8173C /* Pods_MVVMStudy_MVVMStudyUITests.framework */; };
 		D8B6CAD51EE49AFC2B78AE46 /* Pods_MVVMStudyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 528FC42C0119F717CC8395F6 /* Pods_MVVMStudyTests.framework */; };
 		EC5739FAAF7DDC7D67BEE26A /* Pods_MVVMStudy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75EABF4734B62B4CC8AC8159 /* Pods_MVVMStudy.framework */; };
@@ -173,7 +175,6 @@
 		8548F3AB23B37CD200E08E9D /* MProductDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MProductDetailModel.swift; sourceTree = "<group>"; };
 		8548F3AF23B3993D00E08E9D /* NavigationEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationEvent.swift; sourceTree = "<group>"; };
 		8548F3B123B39D8200E08E9D /* BaseMvvMViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseMvvMViewController.swift; sourceTree = "<group>"; };
-		8548F3FA23BE205100E08E9D /* Binding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Binding.swift; sourceTree = "<group>"; };
 		857345F123A2549B00EF36F1 /* MVVMStudy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVVMStudy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		857345F423A2549B00EF36F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		857345F623A2549B00EF36F1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -197,6 +198,7 @@
 		8573463723A9129800EF36F1 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		8573463923A9171E00EF36F1 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		858DC8B023C7629D000041AC /* CustomFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFunctions.swift; sourceTree = "<group>"; };
+		858DC8B423C895C3000041AC /* MProductsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MProductsViewModelTests.swift; sourceTree = "<group>"; };
 		8610AD3D376622D4E0C5286A /* Pods-MVVMStudyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVMStudyTests.debug.xcconfig"; path = "Target Support Files/Pods-MVVMStudyTests/Pods-MVVMStudyTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B00FE41AB258F2DB57F8173C /* Pods_MVVMStudy_MVVMStudyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MVVMStudy_MVVMStudyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -318,7 +320,6 @@
 			isa = PBXGroup;
 			children = (
 				8548F39C23B0E14400E08E9D /* Observable.swift */,
-				8548F3FA23BE205100E08E9D /* Binding.swift */,
 				858DC8B023C7629D000041AC /* CustomFunctions.swift */,
 			);
 			path = Observation;
@@ -371,6 +372,7 @@
 			children = (
 				8573460B23A2549E00EF36F1 /* MVVMStudyTests.swift */,
 				8573460D23A2549E00EF36F1 /* Info.plist */,
+				858DC8B423C895C3000041AC /* MProductsViewModelTests.swift */,
 			);
 			path = MVVMStudyTests;
 			sourceTree = "<group>";
@@ -688,6 +690,7 @@
 				8548F37823AB710300E08E9D /* BasePresenter.swift in Sources */,
 				8548F37223A9F5A300E08E9D /* ProductsInteractor.swift in Sources */,
 				8548F3AA23B3745C00E08E9D /* MProductDetailViewModel.swift in Sources */,
+				858DC8B523C895C4000041AC /* MProductsViewModelTests.swift in Sources */,
 				8573462D23A90BFB00EF36F1 /* ProductsViewController.swift in Sources */,
 				8548F3A623B370E700E08E9D /* MProductDetailProtocols.swift in Sources */,
 				857345F923A2549B00EF36F1 /* ViewController.swift in Sources */,
@@ -715,7 +718,6 @@
 				8548F39423AD088A00E08E9D /* MProductsViewController.swift in Sources */,
 				8548F3A123B35AA700E08E9D /* BaseViewModel.swift in Sources */,
 				8548F38D23ACB15800E08E9D /* ProductDetailInteractor.swift in Sources */,
-				8548F3FB23BE205100E08E9D /* Binding.swift in Sources */,
 				8548F38B23ACB14900E08E9D /* ProductDetailPresenter.swift in Sources */,
 				8548F3AC23B37CD200E08E9D /* MProductDetailModel.swift in Sources */,
 				8573463623A9126200EF36F1 /* ProductsPresenter.swift in Sources */,
@@ -732,6 +734,7 @@
 				8548F3E523B4C99900E08E9D /* BasePresenter.swift in Sources */,
 				8548F3DA23B4C99300E08E9D /* BaseViewModel.swift in Sources */,
 				858DC8B223C7629D000041AC /* CustomFunctions.swift in Sources */,
+				858DC8B623C895C4000041AC /* MProductsViewModelTests.swift in Sources */,
 				8548F3B623B4C97200E08E9D /* MProductsModel.swift in Sources */,
 				8548F3D023B4C98A00E08E9D /* ProductsViewController.swift in Sources */,
 				8548F3DD23B4C99300E08E9D /* BaseMvvMViewController.swift in Sources */,
@@ -775,6 +778,7 @@
 				8548F3E823B4C99900E08E9D /* BasePresenter.swift in Sources */,
 				8548F3DF23B4C99400E08E9D /* BaseViewModel.swift in Sources */,
 				858DC8B323C7629D000041AC /* CustomFunctions.swift in Sources */,
+				858DC8B723C895C4000041AC /* MProductsViewModelTests.swift in Sources */,
 				8548F3BA23B4C97300E08E9D /* MProductsModel.swift in Sources */,
 				8548F3D523B4C98A00E08E9D /* ProductsViewController.swift in Sources */,
 				8548F3E223B4C99400E08E9D /* BaseMvvMViewController.swift in Sources */,

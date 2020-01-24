@@ -18,11 +18,11 @@ class MProductsViewController: BaseMvvMViewController<MProductsViewModel> {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        viewModel.products.observe = { products in
-            super.dismissProgress()
-            
-            self.productsTableViewAdapter.products = products
-            self.tableViewProducts.reloadData()
+        viewModel.products <-> {[weak self] products in
+                self?.dismissProgress()
+                
+                self?.productsTableViewAdapter.products = products
+                self?.tableViewProducts.reloadData()
         }
         
         self.productsTableViewAdapter.delegate = self

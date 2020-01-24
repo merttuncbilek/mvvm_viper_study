@@ -21,12 +21,12 @@ class BaseMvvMViewController<VM: BaseViewModelProtocol>: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     
-        self.viewModel.error.observe = { error in
-            super.showMessage(error)
+        self.viewModel.error <-> {[weak self] error in
+            self?.showMessage(error)
         }
         
-        self.viewModel.navigationEvent.observe = { navigation in
-            self.performSegue(withIdentifier: navigation.target.rawValue, sender: navigation.payload)
+        self.viewModel.navigationEvent <-> {[weak self] navigation in
+            self?.performSegue(withIdentifier: navigation.target.rawValue, sender: navigation.payload)
         }
         
     }

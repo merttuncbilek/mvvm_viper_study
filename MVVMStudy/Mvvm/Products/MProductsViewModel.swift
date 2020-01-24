@@ -13,9 +13,9 @@ class MProductsViewModel: BaseViewModel<MProductsModel>, MProductsViewModelProto
     var products = Observable<[Product]>()
     
     override func setUpObserves() {
-        model.productsResponse.observe = { productResponse in
+        model.productsResponse <-> {[weak self] productResponse in
             if let products = productResponse.products {
-                self.products.value = products
+                self?.products.value = products
             }
         }
     }

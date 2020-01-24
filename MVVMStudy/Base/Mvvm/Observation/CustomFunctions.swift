@@ -8,8 +8,8 @@
 
 import Foundation
 
-infix operator ->>
+infix operator <->
 
-func ->> <T>(lhs: Observable<T>, rhs: @escaping Observer<T>) {
+func <-> <T>(lhs: Observable<T>, rhs: @escaping Observer<T>) {
     lhs.observers.append(rhs)
 }

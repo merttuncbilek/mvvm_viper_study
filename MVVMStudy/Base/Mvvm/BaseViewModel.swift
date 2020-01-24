@@ -27,8 +27,8 @@ class BaseViewModel<M>: BaseViewModelProtocol where M: BaseModelProtocol {
         
         self.setUpObserves()
         
-        self.model.observableError.observe = { error in
-            self.error.value = error
+        self.model.observableError <-> {[weak self] error in
+            self?.error.value = error
         }
     }
     

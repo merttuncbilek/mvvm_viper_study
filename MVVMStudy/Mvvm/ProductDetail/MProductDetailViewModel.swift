@@ -13,8 +13,8 @@ class MProductDetailViewModel: BaseViewModel<MProductDetailModel>, ProductDetail
     var productDetail = Observable<ProductDetail>()
     
     override func setUpObserves() {
-        model.productDetail.observe = { productDetail in
-            self.productDetail.value = productDetail
+        model.productDetail <-> {[weak self] productDetail in
+            self?.productDetail.value = productDetail
         }
     }
     

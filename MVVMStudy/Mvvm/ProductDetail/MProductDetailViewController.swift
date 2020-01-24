@@ -19,31 +19,12 @@ class MProductDetailViewController: BaseMvvMViewController<MProductDetailViewMod
     
     var productId: String?
     
-    var productDetailBond: Bond<ProductDetail>?
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let productDetailBond = Bond<ProductDetail>() { productDetail in
-            super.dismissProgress()
-            self.setUIElements(with: productDetail)
-        }
-        
-        productDetailBond.bind(observable: viewModel.productDetail)
-        
-//        viewModel.productDetail.observers.append({[weak self] productDetail in
-//            self?.dismissProgress()
-//            self?.setUIElements(with: productDetail)
-//        })
-        
-        viewModel.productDetail ->> {[weak self] productDetail in
+        viewModel.productDetail <-> {[weak self] productDetail in
             self?.dismissProgress()
             self?.setUIElements(with: productDetail)
-        }
-        
-        viewModel.productDetail.observe = { productDetail in
-//            super.dismissProgress()
-//            self.setUIElements(with: productDetail)
         }
     }
     

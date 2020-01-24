@@ -18,12 +18,9 @@ class Observable<T> {
                 for observer in self.observers {
                     observer(self.value)
                 }
-                self.observe?(self.value)
             }
         }
     }
     
     var observers = [Observer<T>]()
-    
-    var observe: ((T) -> Void)?
 }
