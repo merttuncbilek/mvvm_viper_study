@@ -20,7 +20,7 @@ class MProductsViewModel: BaseViewModel<MProductsModel>, MProductsViewModelProto
         }
     }
     
-    func fetchPosts() {
+    func fetchProducts() {
         model.fetchProductsData()
     }
     

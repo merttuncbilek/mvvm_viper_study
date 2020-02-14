@@ -11,7 +11,7 @@ import Foundation
 protocol MProductsViewModelProtocol: BaseViewModelProtocol {
     var products: Observable<[Product]> {get set}
     
-    func fetchPosts()
+    func fetchProducts()
     func onProductItemSelected(at index: Int)
 }
 

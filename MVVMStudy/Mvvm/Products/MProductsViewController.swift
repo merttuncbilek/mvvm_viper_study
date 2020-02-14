@@ -30,7 +30,7 @@ class MProductsViewController: BaseMvvMViewController<MProductsViewModel> {
         self.tableViewProducts.dataSource = self.productsTableViewAdapter
         
         super.showProgress()
-        viewModel.fetchPosts()
+        viewModel.fetchProducts()
     }
     
     override func viewWillAppear(_ animated: Bool) {
