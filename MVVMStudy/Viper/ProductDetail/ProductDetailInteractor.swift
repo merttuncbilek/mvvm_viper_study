@@ -14,13 +14,11 @@ class ProductDetailInteractor: ProductDetailInteractorToPresenterProtocol {
     
     func fetchProductDetail(with id: String) {
         let requestMethod = String.init(format: Constants.METHOD_DETAIL, id)
-        RemoteDataSource.shared.getFromApi(ProductDetail.self, method: requestMethod, onResponse: { success, data, error in
-            if success {
-                if let data = data {
-                    self.presenter?.onProductDetailFetched(productDetail: data)
-                }
-            } else {
-                self.presenter?.onErrorReceived(message: error?.localizedDescription ?? "Error")
+        RemoteDataSource.shared.getFromApi(ProductDetail.self, method: requestMethod, onResponse: { result in
+            do {
+                self.presenter?.onProductDetailFetched(productDetail: try result.get())
+            } catch let error {
+                self.presenter?.onErrorReceived(message: error.localizedDescription)
             }
         })
     }

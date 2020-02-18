@@ -16,13 +16,11 @@ class ProductsInteractor {
 extension ProductsInteractor: ProductsInteractorToPresenterProcotol {
      
     func fetchProductsData() {
-        RemoteDataSource.shared.getFromApi(ProductsResponse.self, method: Constants.METHOD_LIST, onResponse: { success, data, error in
-            if success {
-                if let data = data {
-                    self.presenter?.onProductsDataReceived(productResponse: data)
-                }
-            } else {
-                self.presenter?.onErrorReceived(message: error?.localizedDescription ?? "Error")
+        RemoteDataSource.shared.getFromApi(ProductsResponse.self, method: Constants.METHOD_LIST, onResponse: { result in
+            do {
+                self.presenter?.onProductsDataReceived(productResponse: try result.get())
+            } catch let error {
+                self.presenter?.onErrorReceived(message: error.localizedDescription)
             }
         })
     }

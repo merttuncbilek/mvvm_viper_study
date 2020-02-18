@@ -20,17 +20,17 @@ class RemoteDataSource {
         self.baseURL = baseURL
     }
     
-    func getFromApi<T: BaseMappable>(_ dump: T.Type, method: String, onResponse: @escaping ((Bool, T?, Error?) -> Void)) {
+    func getFromApi<T: BaseMappable>(_ dump: T.Type, method: String, onResponse: @escaping ((Result<T, DataSourceError>) -> Void)) {
         AF.request(baseURL.appending(method), method: .get).responseString{ response in
             guard let json = response.value else {
-                onResponse(false, nil, nil)
+                onResponse(.failure(.nilResponse))
                 return
             }
             
             if let responseData = Mapper<T>().map(JSONString: json) {
-                onResponse(true, responseData, nil)
+                onResponse(.success(responseData))
             } else {
-                onResponse(false, nil, nil)
+                onResponse(.failure(.businessError))
             }
             
         }

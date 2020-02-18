@@ -14,13 +14,11 @@ class MProductDetailModel: BaseModel, ProductDetailModelProtocol {
     
     func getProductDetail(id: String) {
         let requestMethod = String.init(format: Constants.METHOD_DETAIL, id)
-        RemoteDataSource.shared.getFromApi(ProductDetail.self, method: requestMethod, onResponse: { success, data, error in
-            if success {
-                if let data = data {
-                    self.productDetail.value = data
-                }
-            } else {
-                self.observableError.value = error?.localizedDescription ?? "Error"
+        RemoteDataSource.shared.getFromApi(ProductDetail.self, method: requestMethod, onResponse: { result in
+            do {
+                self.productDetail.value = try result.get()
+            } catch let error {
+                self.observableError.value = error.localizedDescription
             }
         })
     }

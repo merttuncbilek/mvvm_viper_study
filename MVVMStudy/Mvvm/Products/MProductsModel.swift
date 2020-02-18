@@ -12,13 +12,11 @@ class MProductsModel: BaseModel, MProductsModelProtocol {
     var productsResponse = Observable<ProductsResponse>()
     
     func fetchProductsData() {
-        RemoteDataSource.shared.getFromApi(ProductsResponse.self, method: Constants.METHOD_LIST, onResponse: { success, data, error in
-            if success {
-                if let data = data {
-                    self.productsResponse.value = data
-                }
-            } else {
-                self.observableError.value = error?.localizedDescription ?? "Error"
+        RemoteDataSource.shared.getFromApi(ProductsResponse.self, method: Constants.METHOD_LIST, onResponse: { result in
+            do {
+                self.productsResponse.value = try result.get()
+            } catch let error {
+                self.observableError.value = error.localizedDescription
             }
         })
     }
