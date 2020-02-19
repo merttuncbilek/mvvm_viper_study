@@ -11,13 +11,9 @@ import Foundation
 protocol BaseModelProtocol {
     var observableError: Observable<String> {get set}
     
-    init()
 }
 
 class BaseModel: BaseModelProtocol {
     var observableError = Observable<String>()
     
-    required init() {
-        
-    }
 }

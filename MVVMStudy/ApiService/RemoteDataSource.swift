@@ -26,7 +26,7 @@ class RemoteDataSource {
                 onResponse(.failure(.nilResponse))
                 return
             }
-            
+            print(#"Response \#(json)"#)
             if let responseData = Mapper<T>().map(JSONString: json) {
                 onResponse(.success(responseData))
             } else {

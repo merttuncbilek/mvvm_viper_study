@@ -8,9 +8,20 @@
 
 import Foundation
 
-class MProductsViewModel: BaseViewModel<MProductsModel>, MProductsViewModelProtocol {
+class MProductsViewModel: BaseViewModel, MProductsViewModelProtocol {
    
     var products = Observable<[Product]>()
+    var model: MProductsModelProtocol
+    
+    required convenience init() {
+        self.init(model: MProductsModel())
+    }
+    
+    init(model: MProductsModelProtocol) {
+        self.model = model
+        super.init()
+        super.observeError(on: self.model)
+    }
     
     override func setUpObserves() {
         model.productsResponse <-> {[weak self] productResponse in

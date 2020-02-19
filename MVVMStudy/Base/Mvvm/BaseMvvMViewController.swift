@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class BaseMvvMViewController<VM: BaseViewModelProtocol>: BaseViewController {
+class BaseMvvMViewController<VM: BaseViewModel>: BaseViewController {
     
     var viewModel: VM
     

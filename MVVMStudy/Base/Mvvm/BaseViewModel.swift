@@ -12,24 +12,13 @@ protocol BaseViewModelProtocol: class {
     var error: Observable<String> {get set}
     var navigationEvent: Observable<NavigationEvent> {get set}
     
-    associatedtype Model
-    var model: Model {get set}
-
     init()
 }
 
-class BaseViewModel<M>: BaseViewModelProtocol where M: BaseModelProtocol {
-    
-    var model: M
+class BaseViewModel: BaseViewModelProtocol {
     
     required init() {
-        self.model = M()
-        
         self.setUpObserves()
-        
-        self.model.observableError <-> {[weak self] error in
-            self?.error.value = error
-        }
     }
     
     var error = Observable<String>()
@@ -37,6 +26,14 @@ class BaseViewModel<M>: BaseViewModelProtocol where M: BaseModelProtocol {
     
     func setUpObserves() {
         fatalError("This function must be implemented")
+    }
+    
+    func observeError(on models: BaseModelProtocol...) {
+        for model in models {
+            model.observableError <-> { [weak self] error in
+                self?.error.value = error                
+            }
+        }
     }
     
 }
