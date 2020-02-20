@@ -121,6 +121,16 @@
 		858DC8B323C7629D000041AC /* CustomFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858DC8B023C7629D000041AC /* CustomFunctions.swift */; };
 		858DC8B623C895C4000041AC /* MProductDetailViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858DC8B423C895C3000041AC /* MProductDetailViewModelTests.swift */; };
 		85C80D7423FBC8A30045A7E4 /* DataSourceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C80D7323FBC8A30045A7E4 /* DataSourceError.swift */; };
+		85C80D7623FBF26F0045A7E4 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 85C80D7523FBF26E0045A7E4 /* Podfile */; };
+		85C80D7723FBF2AF0045A7E4 /* DataSourceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C80D7323FBC8A30045A7E4 /* DataSourceError.swift */; };
+		85C80D7823FBF3A60045A7E4 /* DataSourceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C80D7323FBC8A30045A7E4 /* DataSourceError.swift */; };
+		85C80D7A23FBF4360045A7E4 /* MProductsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C80D7923FBF4360045A7E4 /* MProductsViewModelTests.swift */; };
+		85C80D7F23FC21290045A7E4 /* MockProductsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C80D7E23FC21290045A7E4 /* MockProductsModel.swift */; };
+		85C80D8123FC214D0045A7E4 /* MockProductsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C80D8023FC214D0045A7E4 /* MockProductsViewModel.swift */; };
+		85C80D8523FC22930045A7E4 /* MockProductResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C80D8423FC22930045A7E4 /* MockProductResponse.swift */; };
+		85C80D8823FCFADB0045A7E4 /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C80D8723FCFADB0045A7E4 /* Cache.swift */; };
+		85C80D8923FCFADB0045A7E4 /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C80D8723FCFADB0045A7E4 /* Cache.swift */; };
+		85C80D8A23FCFADB0045A7E4 /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C80D8723FCFADB0045A7E4 /* Cache.swift */; };
 		D644A53DC41F1B378D8D195C /* Pods_MVVMStudy_MVVMStudyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B00FE41AB258F2DB57F8173C /* Pods_MVVMStudy_MVVMStudyUITests.framework */; };
 		D8B6CAD51EE49AFC2B78AE46 /* Pods_MVVMStudyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 528FC42C0119F717CC8395F6 /* Pods_MVVMStudyTests.framework */; };
 		EC5739FAAF7DDC7D67BEE26A /* Pods_MVVMStudy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75EABF4734B62B4CC8AC8159 /* Pods_MVVMStudy.framework */; };
@@ -201,6 +211,12 @@
 		858DC8B023C7629D000041AC /* CustomFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFunctions.swift; sourceTree = "<group>"; };
 		858DC8B423C895C3000041AC /* MProductDetailViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MProductDetailViewModelTests.swift; sourceTree = "<group>"; };
 		85C80D7323FBC8A30045A7E4 /* DataSourceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSourceError.swift; sourceTree = "<group>"; };
+		85C80D7523FBF26E0045A7E4 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		85C80D7923FBF4360045A7E4 /* MProductsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MProductsViewModelTests.swift; sourceTree = "<group>"; };
+		85C80D7E23FC21290045A7E4 /* MockProductsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockProductsModel.swift; sourceTree = "<group>"; };
+		85C80D8023FC214D0045A7E4 /* MockProductsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockProductsViewModel.swift; sourceTree = "<group>"; };
+		85C80D8423FC22930045A7E4 /* MockProductResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockProductResponse.swift; sourceTree = "<group>"; };
+		85C80D8723FCFADB0045A7E4 /* Cache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cache.swift; sourceTree = "<group>"; };
 		8610AD3D376622D4E0C5286A /* Pods-MVVMStudyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVMStudyTests.debug.xcconfig"; path = "Target Support Files/Pods-MVVMStudyTests/Pods-MVVMStudyTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B00FE41AB258F2DB57F8173C /* Pods_MVVMStudy_MVVMStudyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MVVMStudy_MVVMStudyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -331,6 +347,7 @@
 		857345E823A2549B00EF36F1 = {
 			isa = PBXGroup;
 			children = (
+				85C80D7523FBF26E0045A7E4 /* Podfile */,
 				857345F323A2549B00EF36F1 /* MVVMStudy */,
 				8573460A23A2549E00EF36F1 /* MVVMStudyTests */,
 				8573461523A2549E00EF36F1 /* MVVMStudyUITests */,
@@ -353,6 +370,7 @@
 		857345F323A2549B00EF36F1 /* MVVMStudy */ = {
 			isa = PBXGroup;
 			children = (
+				85C80D8623FCFA8A0045A7E4 /* Util */,
 				8548F39123AD086100E08E9D /* Mvvm */,
 				8548F39023AD083B00E08E9D /* Viper */,
 				8573463223A90D7C00EF36F1 /* Base */,
@@ -373,10 +391,12 @@
 		8573460A23A2549E00EF36F1 /* MVVMStudyTests */ = {
 			isa = PBXGroup;
 			children = (
+				85C80D7B23FC21000045A7E4 /* Mocks */,
 				8573460B23A2549E00EF36F1 /* MVVMStudyTests.swift */,
 				8573460D23A2549E00EF36F1 /* Info.plist */,
 				858DC8B423C895C3000041AC /* MProductDetailViewModelTests.swift */,
 				850FABD923DAD7EF005E4EA0 /* TestExtensions.swift */,
+				85C80D7923FBF4360045A7E4 /* MProductsViewModelTests.swift */,
 			);
 			path = MVVMStudyTests;
 			sourceTree = "<group>";
@@ -437,6 +457,56 @@
 			path = Base;
 			sourceTree = "<group>";
 		};
+		85C80D7B23FC21000045A7E4 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				85C80D8323FC22800045A7E4 /* Entities */,
+				85C80D8223FC225E0045A7E4 /* Business */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		85C80D7C23FC210A0045A7E4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				85C80D7E23FC21290045A7E4 /* MockProductsModel.swift */,
+				85C80D8023FC214D0045A7E4 /* MockProductsViewModel.swift */,
+			);
+			path = Products;
+			sourceTree = "<group>";
+		};
+		85C80D7D23FC21120045A7E4 /* ProductDetails */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ProductDetails;
+			sourceTree = "<group>";
+		};
+		85C80D8223FC225E0045A7E4 /* Business */ = {
+			isa = PBXGroup;
+			children = (
+				85C80D7D23FC21120045A7E4 /* ProductDetails */,
+				85C80D7C23FC210A0045A7E4 /* Products */,
+			);
+			path = Business;
+			sourceTree = "<group>";
+		};
+		85C80D8323FC22800045A7E4 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				85C80D8423FC22930045A7E4 /* MockProductResponse.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		85C80D8623FCFA8A0045A7E4 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				85C80D8723FCFADB0045A7E4 /* Cache.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
 		FCA6B1A8F88B29F5E851EAE9 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -480,6 +550,7 @@
 				8573460323A2549E00EF36F1 /* Sources */,
 				8573460423A2549E00EF36F1 /* Frameworks */,
 				8573460523A2549E00EF36F1 /* Resources */,
+				2AB9C2CBB1CCE1DADC5FBF4B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -561,6 +632,7 @@
 			files = (
 				8573460123A2549D00EF36F1 /* LaunchScreen.storyboard in Resources */,
 				857345FE23A2549D00EF36F1 /* Assets.xcassets in Resources */,
+				85C80D7623FBF26F0045A7E4 /* Podfile in Resources */,
 				857345FC23A2549B00EF36F1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -602,6 +674,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2AB9C2CBB1CCE1DADC5FBF4B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MVVMStudyTests/Pods-MVVMStudyTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MVVMStudyTests/Pods-MVVMStudyTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MVVMStudyTests/Pods-MVVMStudyTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		4AF96A742BEC31624BBEC840 /* [CP] Embed Pods Frameworks */ = {
@@ -719,6 +808,7 @@
 				8548F3A823B3712200E08E9D /* BaseModel.swift in Sources */,
 				8548F39623AD08B200E08E9D /* MProductsViewModel.swift in Sources */,
 				8573463823A9129800EF36F1 /* BaseView.swift in Sources */,
+				85C80D8823FCFADB0045A7E4 /* Cache.swift in Sources */,
 				8548F39423AD088A00E08E9D /* MProductsViewController.swift in Sources */,
 				8548F3A123B35AA700E08E9D /* BaseViewModel.swift in Sources */,
 				8548F38D23ACB15800E08E9D /* ProductDetailInteractor.swift in Sources */,
@@ -737,10 +827,12 @@
 				8548F3B523B4C97200E08E9D /* MProductsViewController.swift in Sources */,
 				8548F3E523B4C99900E08E9D /* BasePresenter.swift in Sources */,
 				8548F3DA23B4C99300E08E9D /* BaseViewModel.swift in Sources */,
+				85C80D7723FBF2AF0045A7E4 /* DataSourceError.swift in Sources */,
 				858DC8B223C7629D000041AC /* CustomFunctions.swift in Sources */,
 				858DC8B623C895C4000041AC /* MProductDetailViewModelTests.swift in Sources */,
 				8548F3B623B4C97200E08E9D /* MProductsModel.swift in Sources */,
 				8548F3D023B4C98A00E08E9D /* ProductsViewController.swift in Sources */,
+				85C80D7F23FC21290045A7E4 /* MockProductsModel.swift in Sources */,
 				8548F3DD23B4C99300E08E9D /* BaseMvvMViewController.swift in Sources */,
 				8548F3C023B4C97A00E08E9D /* MProductDetailProtocols.swift in Sources */,
 				8548F3E423B4C99900E08E9D /* BaseView.swift in Sources */,
@@ -756,6 +848,8 @@
 				8548F3D923B4C99300E08E9D /* Observable.swift in Sources */,
 				850FABDA23DAD7EF005E4EA0 /* TestExtensions.swift in Sources */,
 				8573460C23A2549E00EF36F1 /* MVVMStudyTests.swift in Sources */,
+				85C80D7A23FBF4360045A7E4 /* MProductsViewModelTests.swift in Sources */,
+				85C80D8923FCFADB0045A7E4 /* Cache.swift in Sources */,
 				8548F3D123B4C98A00E08E9D /* ProductsWireFrame.swift in Sources */,
 				8548F3C923B4C98000E08E9D /* ProductDetailInteractor.swift in Sources */,
 				8548F3E323B4C99900E08E9D /* BaseWireFrame.swift in Sources */,
@@ -765,7 +859,9 @@
 				8548F3B723B4C97200E08E9D /* ProductsTableViewAdapter.swift in Sources */,
 				8548F3F223B4C9B400E08E9D /* ViewController.swift in Sources */,
 				8548F3C523B4C98000E08E9D /* ProductDetailProtocols.swift in Sources */,
+				85C80D8523FC22930045A7E4 /* MockProductResponse.swift in Sources */,
 				8548F3CF23B4C98A00E08E9D /* ProductsProtocols.swift in Sources */,
+				85C80D8123FC214D0045A7E4 /* MockProductsViewModel.swift in Sources */,
 				8548F3BF23B4C97A00E08E9D /* MProductDetailModel.swift in Sources */,
 				8548F3BD23B4C97A00E08E9D /* MProductDetailViewController.swift in Sources */,
 				8548F3DB23B4C99300E08E9D /* BaseModel.swift in Sources */,
@@ -786,6 +882,7 @@
 				8548F3BA23B4C97300E08E9D /* MProductsModel.swift in Sources */,
 				8548F3D523B4C98A00E08E9D /* ProductsViewController.swift in Sources */,
 				8548F3E223B4C99400E08E9D /* BaseMvvMViewController.swift in Sources */,
+				85C80D7823FBF3A60045A7E4 /* DataSourceError.swift in Sources */,
 				8548F3C423B4C97B00E08E9D /* MProductDetailProtocols.swift in Sources */,
 				8548F3E723B4C99900E08E9D /* BaseView.swift in Sources */,
 				8548F3F023B4C9A700E08E9D /* RemoteDataSource.swift in Sources */,
@@ -807,6 +904,7 @@
 				8548F3F623B4C9B500E08E9D /* Constants.swift in Sources */,
 				8548F3BB23B4C97300E08E9D /* ProductsTableViewAdapter.swift in Sources */,
 				8548F3F523B4C9B500E08E9D /* ViewController.swift in Sources */,
+				85C80D8A23FCFADB0045A7E4 /* Cache.swift in Sources */,
 				8548F3CA23B4C98100E08E9D /* ProductDetailProtocols.swift in Sources */,
 				8548F3D423B4C98A00E08E9D /* ProductsProtocols.swift in Sources */,
 				8548F3C323B4C97B00E08E9D /* MProductDetailModel.swift in Sources */,

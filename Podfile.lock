@@ -3,24 +3,32 @@ PODS:
   - Kingfisher (5.12.0):
     - Kingfisher/Core (= 5.12.0)
   - Kingfisher/Core (5.12.0)
+  - Nimble (8.0.5)
   - ObjectMapper (3.5.1)
+  - Quick (2.2.0)
 
 DEPENDENCIES:
   - Alamofire (~> 5.0.0-rc.3)
   - Kingfisher (~> 5.0)
+  - Nimble
   - ObjectMapper (~> 3.4)
+  - Quick
 
 SPEC REPOS:
   trunk:
     - Alamofire
     - Kingfisher
+    - Nimble
     - ObjectMapper
+    - Quick
 
 SPEC CHECKSUMS:
   Alamofire: ca8c0de6906873be89d6deec5c8de279e00bf872
   Kingfisher: dc6e0f53bb5b12c3e75bedb0e01bbd7a640eea69
+  Nimble: 4ab1aeb9b45553c75b9687196b0fa0713170a332
   ObjectMapper: 70187b8941977c62ccfb423caf6b50be405cabf0
+  Quick: 7fb19e13be07b5dfb3b90d4f9824c855a11af40e
 
-PODFILE CHECKSUM: 1f1b9e3969a1de34854158bf63c0f9eaa696360d
+PODFILE CHECKSUM: 892925cbbd5cc4864178dcd33cf9204b3b19aeea
 
 COCOAPODS: 1.8.4
