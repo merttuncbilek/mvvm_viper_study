@@ -18,13 +18,6 @@ class MProductsViewController: BaseMvvMViewController<MProductsViewModel> {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        viewModel.products <-> {[weak self] products in
-                self?.dismissProgress()
-                
-                self?.productsTableViewAdapter.products = products
-                self?.tableViewProducts.reloadData()
-        }
-        
         self.productsTableViewAdapter.delegate = self
         self.tableViewProducts.delegate = self.productsTableViewAdapter
         self.tableViewProducts.dataSource = self.productsTableViewAdapter
@@ -37,6 +30,16 @@ class MProductsViewController: BaseMvvMViewController<MProductsViewModel> {
         self.title = "PRODUCTS"
     }
     
+    override func setUpObservers() {
+        super.setUpObservers()
+        
+        viewModel.products <-> {[weak self] products in
+                self?.dismissProgress()
+                
+                self?.productsTableViewAdapter.products = products
+                self?.tableViewProducts.reloadData()
+        }
+    }
 }
 
 extension MProductsViewController: ProductsTableViewAdapterDelegate {

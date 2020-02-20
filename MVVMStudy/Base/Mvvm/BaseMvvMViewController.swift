@@ -20,7 +20,12 @@ class BaseMvvMViewController<VM: BaseViewModel>: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.setUpObservers()
+        
+    }
     
+    func setUpObservers() {
         self.viewModel.error <-> {[weak self] error in
             self?.showMessage(error)
         }
@@ -28,7 +33,6 @@ class BaseMvvMViewController<VM: BaseViewModel>: BaseViewController {
         self.viewModel.navigationEvent <-> {[weak self] navigation in
             self?.performSegue(withIdentifier: navigation.target.rawValue, sender: navigation.payload)
         }
-        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

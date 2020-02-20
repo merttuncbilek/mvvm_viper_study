@@ -22,10 +22,6 @@ class MProductDetailViewController: BaseMvvMViewController<MProductDetailViewMod
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        viewModel.productDetail <-> {[weak self] productDetail in
-            self?.dismissProgress()
-            self?.setUIElements(with: productDetail)
-        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -34,6 +30,15 @@ class MProductDetailViewController: BaseMvvMViewController<MProductDetailViewMod
         if let productId = productId {
             super.showProgress()
             viewModel.getProductDetail(id: productId)
+        }
+    }
+    
+    override func setUpObservers() {
+        super.setUpObservers()
+        
+        viewModel.productDetail <-> {[weak self] productDetail in
+            self?.dismissProgress()
+            self?.setUIElements(with: productDetail)
         }
     }
     
