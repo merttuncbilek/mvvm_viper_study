@@ -7,16 +7,17 @@
 //
 
 import Foundation
+import Bond
 
 protocol MProductsViewModelProtocol: BaseViewModelProtocol {
-    var products: Observable<[Product]> {get set}
+    var products: MutableObservableArray<Product> {get set}
     
     func fetchProducts()
     func onProductItemSelected(at index: Int)
 }
 
 protocol MProductsModelProtocol: BaseModelProtocol {
-    var productsResponse: Observable<ProductsResponse> {get set}
+    var productsResponse: Observable<ProductsResponse?> {get set}
     
     func fetchProductsData()
 }

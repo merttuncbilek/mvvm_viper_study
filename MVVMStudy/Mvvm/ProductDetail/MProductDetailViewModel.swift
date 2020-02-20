@@ -7,10 +7,11 @@
 //
 
 import Foundation
+import Bond
 
 class MProductDetailViewModel: BaseViewModel, ProductDetailViewModelProtocol {
     
-    var productDetail = Observable<ProductDetail>()
+    var productDetail = Observable<ProductDetail?>(nil)
     var model: ProductDetailModelProtocol
     
     required convenience init() {
@@ -25,9 +26,9 @@ class MProductDetailViewModel: BaseViewModel, ProductDetailViewModelProtocol {
     }
     
     override func setUpObserves() {
-        model.productDetail <-> {[weak self] productDetail in
-            self?.productDetail.value = productDetail
-        }
+        model.productDetail.observeNext {[weak self] productDetail in
+            self?.productDetail.send(productDetail)
+        }.dispose(in: bag)
     }
     
     func getProductDetail(id: String) {

@@ -1,34 +1,47 @@
 PODS:
   - Alamofire (5.0.0-rc.3)
+  - Bond (7.6.6):
+    - Differ (~> 1.4)
+    - ReactiveKit (~> 3.14)
+  - Differ (1.4.4)
   - Kingfisher (5.12.0):
     - Kingfisher/Core (= 5.12.0)
   - Kingfisher/Core (5.12.0)
   - Nimble (8.0.5)
   - ObjectMapper (3.5.1)
   - Quick (2.2.0)
+  - ReactiveKit (3.16.2)
 
 DEPENDENCIES:
   - Alamofire (~> 5.0.0-rc.3)
+  - Bond
   - Kingfisher (~> 5.0)
   - Nimble
   - ObjectMapper (~> 3.4)
   - Quick
+  - ReactiveKit
 
 SPEC REPOS:
   trunk:
     - Alamofire
+    - Bond
+    - Differ
     - Kingfisher
     - Nimble
     - ObjectMapper
     - Quick
+    - ReactiveKit
 
 SPEC CHECKSUMS:
   Alamofire: ca8c0de6906873be89d6deec5c8de279e00bf872
+  Bond: 9e7d901cf4ed825b6004a93dd0a7f1c7479e2834
+  Differ: 5cd747e2f29c11ea9605eba7cb369df17e2b1ee2
   Kingfisher: dc6e0f53bb5b12c3e75bedb0e01bbd7a640eea69
   Nimble: 4ab1aeb9b45553c75b9687196b0fa0713170a332
   ObjectMapper: 70187b8941977c62ccfb423caf6b50be405cabf0
   Quick: 7fb19e13be07b5dfb3b90d4f9824c855a11af40e
+  ReactiveKit: c46f8358afe351a9a148c9462ca2d0f5f7b17ca7
 
-PODFILE CHECKSUM: 892925cbbd5cc4864178dcd33cf9204b3b19aeea
+PODFILE CHECKSUM: ddfa08226cada62b26b86b44278d9fd628fdfd9e
 
 COCOAPODS: 1.8.4

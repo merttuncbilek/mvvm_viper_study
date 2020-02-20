@@ -7,10 +7,15 @@
 //
 
 import Foundation
+import Bond
+
+enum ProductsViewState: ViewState {
+    case productsFetched(Bool)
+}
 
 class MProductsViewModel: BaseViewModel, MProductsViewModelProtocol {
    
-    var products = Observable<[Product]>()
+    var products = MutableObservableArray<Product>()
     var model: MProductsModelProtocol
     
     required convenience init() {
@@ -24,11 +29,12 @@ class MProductsViewModel: BaseViewModel, MProductsViewModelProtocol {
     }
     
     override func setUpObserves() {
-        model.productsResponse <-> {[weak self] productResponse in
-            if let products = productResponse.products {
-                self?.products.value = products
+        model.productsResponse.observeNext {[weak self] productResponse in
+            if let products = productResponse?.products {
+                self?.products.replace(with: products)
+                self?.state.send(ProductsViewState.productsFetched(true))
             }
-        }
+        }.dispose(in: bag)
     }
     
     func fetchProducts() {
@@ -36,6 +42,6 @@ class MProductsViewModel: BaseViewModel, MProductsViewModelProtocol {
     }
     
     func onProductItemSelected(at index: Int) {
-        self.navigationEvent.value = NavigationEvent.init(target: .ProductDetail, payload: products.value[index].product_id as AnyObject?)
+        self.navigationEvent.send(NavigationEvent.init(target: .ProductDetail, payload: products[index].product_id as AnyObject?))
     }
 }

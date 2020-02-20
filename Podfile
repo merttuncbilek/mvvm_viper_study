@@ -11,6 +11,8 @@ target 'MVVMStudy' do
   pod 'Alamofire', '~> 5.0.0-rc.3'
   pod 'ObjectMapper', '~> 3.4'
   pod 'Kingfisher', '~> 5.0'
+  pod 'Bond'
+  pod 'ReactiveKit'
 
   target 'MVVMStudyTests' do
     inherit! :search_paths

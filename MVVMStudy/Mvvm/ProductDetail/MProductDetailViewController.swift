@@ -36,10 +36,11 @@ class MProductDetailViewController: BaseMvvMViewController<MProductDetailViewMod
     override func setUpObservers() {
         super.setUpObservers()
         
-        viewModel.productDetail <-> {[weak self] productDetail in
+        viewModel.productDetail.observeNext {[weak self] productDetail in
             self?.dismissProgress()
+            guard let productDetail = productDetail else {return}
             self?.setUIElements(with: productDetail)
-        }
+        }.dispose(in: bag)
     }
     
     fileprivate func setUIElements(with productDetail: ProductDetail) {

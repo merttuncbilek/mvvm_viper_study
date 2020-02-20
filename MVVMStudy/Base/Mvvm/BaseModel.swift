@@ -7,13 +7,15 @@
 //
 
 import Foundation
+import Bond
+import ReactiveKit
 
 protocol BaseModelProtocol {
-    var observableError: Observable<String> {get set}
+    var observableError: PassthroughSubject<String, Never> {get set}
     
 }
 
 class BaseModel: BaseModelProtocol {
-    var observableError = Observable<String>()
+    var observableError = PassthroughSubject<String, Never>()
     
 }

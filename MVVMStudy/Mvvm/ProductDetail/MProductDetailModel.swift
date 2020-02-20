@@ -7,18 +7,20 @@
 //
 
 import Foundation
+import Bond
 
 class MProductDetailModel: BaseModel, ProductDetailModelProtocol {
     
-    var productDetail = Observable<ProductDetail>()
+    var productDetail = Observable<ProductDetail?>(nil)
     
     func getProductDetail(id: String) {
         let requestMethod = String.init(format: Constants.METHOD_DETAIL, id)
         RemoteDataSource.shared.getFromApi(ProductDetail.self, method: requestMethod, onResponse: { result in
             do {
-                self.productDetail.value = try result.get()
+                let productDetail = try result.get()
+                self.productDetail.send(productDetail)
             } catch let error {
-                self.observableError.value = error.localizedDescription
+                self.observableError.send(error.localizedDescription)
             }
         })
     }

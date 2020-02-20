@@ -10,7 +10,7 @@ import Foundation
 
 typealias Observer<T> = (T) -> Void
 
-class Observable<T> {
+class ObservableMine<T> {
     
     var value: T! {
         didSet {

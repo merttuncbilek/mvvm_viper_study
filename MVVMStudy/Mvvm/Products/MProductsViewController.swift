@@ -33,11 +33,22 @@ class MProductsViewController: BaseMvvMViewController<MProductsViewModel> {
     override func setUpObservers() {
         super.setUpObservers()
         
-        viewModel.products <-> {[weak self] products in
-                self?.dismissProgress()
-                
-                self?.productsTableViewAdapter.products = products
-                self?.tableViewProducts.reloadData()
+        viewModel.products.observeNext {[weak self] products in
+            self?.dismissProgress()
+            self?.productsTableViewAdapter.products = products.collection
+            self?.tableViewProducts.reloadData()
+        }.dispose(in: bag)
+        
+    }
+    
+    override func handleViewState(_ state: ViewState) {
+        super.handleViewState(state)
+        
+        switch state {
+        case ProductsViewState.productsFetched(let success):
+            print(#"ViewState is handled \#(success)"#)
+        default:
+            break
         }
     }
 }

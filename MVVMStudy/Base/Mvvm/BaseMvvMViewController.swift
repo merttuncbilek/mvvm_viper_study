@@ -8,10 +8,12 @@
 
 import Foundation
 import UIKit
+import ReactiveKit
 
 class BaseMvvMViewController<VM: BaseViewModel>: BaseViewController {
     
     var viewModel: VM
+    var controllerDisposeBag = DisposeBag()
     
     required init?(coder: NSCoder) {
         self.viewModel = VM.init()
@@ -25,14 +27,24 @@ class BaseMvvMViewController<VM: BaseViewModel>: BaseViewController {
         
     }
     
-    func setUpObservers() {
-        self.viewModel.error <-> {[weak self] error in
-            self?.showMessage(error)
-        }
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
         
-        self.viewModel.navigationEvent <-> {[weak self] navigation in
+        controllerDisposeBag.dispose()
+    }
+    
+    func setUpObservers() {
+        self.viewModel.error.observeNext {[weak self] error in
+            self?.showMessage(error)
+        }.dispose(in: bag)
+        
+        self.viewModel.navigationEvent.observeNext {[weak self] navigation in
             self?.performSegue(withIdentifier: navigation.target.rawValue, sender: navigation.payload)
-        }
+        }.dispose(in: bag)
+        
+        self.viewModel.state.observeNext { [weak self] state in
+            self?.handleViewState(state)
+        }.dispose(in: bag)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -43,5 +55,13 @@ class BaseMvvMViewController<VM: BaseViewModel>: BaseViewController {
                 productDetailViewController.productId = sender as? String
             }
         }
+    }
+    
+    func handleViewState(_ state: ViewState) {
+        
+    }
+    
+    deinit {
+        viewModel.disposeBag()
     }
 }

@@ -10,6 +10,6 @@ import Foundation
 
 infix operator <->
 
-func <-> <T>(lhs: Observable<T>?, rhs: @escaping Observer<T>) {
+func <-> <T>(lhs: ObservableMine<T>?, rhs: @escaping Observer<T>) {
     lhs?.observers.append(rhs)
 }

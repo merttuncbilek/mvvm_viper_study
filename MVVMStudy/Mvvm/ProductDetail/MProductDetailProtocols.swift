@@ -7,15 +7,16 @@
 //
 
 import Foundation
+import Bond
 
 protocol ProductDetailViewModelProtocol: BaseViewModelProtocol {
-    var productDetail: Observable<ProductDetail> {get set}
+    var productDetail: Observable<ProductDetail?> {get set}
     
     func getProductDetail(id: String)
 }
 
 protocol ProductDetailModelProtocol: BaseModelProtocol {
-    var productDetail: Observable<ProductDetail> {get set}
+    var productDetail: Observable<ProductDetail?> {get set}
     
     func getProductDetail(id: String)
 }

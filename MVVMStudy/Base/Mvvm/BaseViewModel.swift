@@ -7,22 +7,28 @@
 //
 
 import Foundation
+import ReactiveKit
+import Bond
 
 protocol BaseViewModelProtocol: class {
-    var error: Observable<String> {get set}
-    var navigationEvent: Observable<NavigationEvent> {get set}
+    var error: PassthroughSubject<String, Never> {get set}
+    var navigationEvent: PassthroughSubject<NavigationEvent, Never> {get set}
+    var state: PassthroughSubject<ViewState, Never> {get set}
     
     init()
 }
 
 class BaseViewModel: BaseViewModelProtocol {
     
+    var bag = DisposeBag()
+    
     required init() {
         self.setUpObserves()
     }
     
-    var error = Observable<String>()
-    var navigationEvent = Observable<NavigationEvent>()
+    var error = PassthroughSubject<String, Never>()
+    var navigationEvent = PassthroughSubject<NavigationEvent, Never>()
+    var state = PassthroughSubject<ViewState, Never>()
     
     func setUpObserves() {
         fatalError("This function must be implemented")
@@ -30,10 +36,15 @@ class BaseViewModel: BaseViewModelProtocol {
     
     func observeError(on models: BaseModelProtocol...) {
         for model in models {
-            model.observableError <-> { [weak self] error in
-                self?.error.value = error                
-            }
+            model.observableError.observeNext { [weak self] error in
+                self?.error.send(error)
+                
+            }.dispose(in: bag)
         }
+    }
+    
+    func disposeBag() {
+        bag.dispose()
     }
     
 }
