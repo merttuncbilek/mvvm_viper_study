@@ -13,6 +13,7 @@ target 'MVVMStudy' do
   pod 'Kingfisher', '~> 5.0'
   pod 'Bond'
   pod 'ReactiveKit'
+  pod 'CryptoSwift'
 
   target 'MVVMStudyTests' do
     inherit! :search_paths
