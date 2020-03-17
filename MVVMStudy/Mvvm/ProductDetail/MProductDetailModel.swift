@@ -9,6 +9,12 @@
 import Foundation
 import Bond
 
+protocol ProductDetailModelProtocol: BaseModelProtocol {
+    var productDetail: Observable<ProductDetail?> {get set}
+    
+    func getProductDetail(id: String)
+}
+
 class MProductDetailModel: BaseModel, ProductDetailModelProtocol {
     
     var productDetail = Observable<ProductDetail?>(nil)

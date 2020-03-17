@@ -10,6 +10,7 @@ import Foundation
 
 enum TargetScreen: String {
     case ProductDetail = "SegueOpenProductDetail"
+    case UIElementsView = "SegueOpenUIElementsView"
 }
 
 class NavigationEvent {

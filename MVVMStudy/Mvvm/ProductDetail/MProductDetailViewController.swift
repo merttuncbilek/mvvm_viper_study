@@ -16,6 +16,7 @@ class MProductDetailViewController: BaseMvvMViewController<MProductDetailViewMod
     @IBOutlet weak var labelProductName: UILabel!
     @IBOutlet weak var labelPrice: UILabel!
     @IBOutlet weak var labelDescription: UILabel!
+    @IBOutlet weak var buttonShowUIViews: UIButton!
     
     var productId: String?
     
@@ -41,6 +42,9 @@ class MProductDetailViewController: BaseMvvMViewController<MProductDetailViewMod
             guard let productDetail = productDetail else {return}
             self?.setUIElements(with: productDetail)
         }.dispose(in: bag)
+        
+        buttonShowUIViews.reactive.tap.bind(to: self) { $0.viewModel.onProductImageSelected() }.dispose(in: bag)
+        
     }
     
     fileprivate func setUIElements(with productDetail: ProductDetail) {

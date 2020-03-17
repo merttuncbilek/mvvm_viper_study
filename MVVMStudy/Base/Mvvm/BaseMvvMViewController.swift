@@ -53,6 +53,8 @@ class BaseMvvMViewController<VM: BaseViewModel>: BaseViewController {
             case .ProductDetail:
                 let productDetailViewController = segue.destination as! MProductDetailViewController
                 productDetailViewController.productId = sender as? String
+            default:
+                print("Not Recognized")
             }
         }
     }

@@ -9,6 +9,13 @@
 import Foundation
 import Bond
 
+protocol ProductDetailViewModelProtocol: BaseViewModelProtocol {
+    var productDetail: Observable<ProductDetail?> {get set}
+    
+    func getProductDetail(id: String)
+    func onProductImageSelected()
+}
+
 class MProductDetailViewModel: BaseViewModel, ProductDetailViewModelProtocol {
     
     var productDetail = Observable<ProductDetail?>(nil)
@@ -33,5 +40,9 @@ class MProductDetailViewModel: BaseViewModel, ProductDetailViewModelProtocol {
     
     func getProductDetail(id: String) {
         model.getProductDetail(id: id)
+    }
+    
+    func onProductImageSelected() {
+        self.navigationEvent.send(NavigationEvent(target: .UIElementsView))
     }
 }
