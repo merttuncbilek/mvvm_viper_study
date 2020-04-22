@@ -97,17 +97,7 @@
 		8548F3F423B4C9B500E08E9D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857345F423A2549B00EF36F1 /* AppDelegate.swift */; };
 		8548F3F523B4C9B500E08E9D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857345F823A2549B00EF36F1 /* ViewController.swift */; };
 		8548F3F623B4C9B500E08E9D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8548F37523AA669A00E08E9D /* Constants.swift */; };
-		8569419823FFB21A0052DD92 /* Notes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8569419723FFB21A0052DD92 /* Notes.swift */; };
-		8569419B23FFBD130052DD92 /* HMAC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8569419A23FFBD130052DD92 /* HMAC.swift */; };
 		8569419D23FFBD810052DD92 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8569419C23FFBD810052DD92 /* Security.framework */; };
-		8569419F23FFBF320052DD92 /* SafeUnwrap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8569419E23FFBF320052DD92 /* SafeUnwrap.swift */; };
-		856941B023FFC64B0052DD92 /* Cipher.m in Sources */ = {isa = PBXBuildFile; fileRef = 856941A423FFC64A0052DD92 /* Cipher.m */; };
-		856941B123FFC64B0052DD92 /* Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 856941A823FFC64A0052DD92 /* Base64.m */; };
-		856941B223FFC64B0052DD92 /* NSData+AES256.m in Sources */ = {isa = PBXBuildFile; fileRef = 856941A923FFC64A0052DD92 /* NSData+AES256.m */; };
-		856941B323FFC64B0052DD92 /* StringCryptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 856941AA23FFC64A0052DD92 /* StringCryptor.m */; };
-		856941B423FFC64B0052DD92 /* Encrypter.m in Sources */ = {isa = PBXBuildFile; fileRef = 856941AB23FFC64A0052DD92 /* Encrypter.m */; };
-		856941B523FFC64B0052DD92 /* NSData+CommonCrypto.m in Sources */ = {isa = PBXBuildFile; fileRef = 856941AC23FFC64A0052DD92 /* NSData+CommonCrypto.m */; };
-		856941B623FFC64B0052DD92 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 856941AF23FFC64B0052DD92 /* NSData+Base64.m */; };
 		856941B923FFFD340052DD92 /* UIElementsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856941B823FFFD340052DD92 /* UIElementsViewController.swift */; };
 		856941BB23FFFD910052DD92 /* UIElementsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856941BA23FFFD910052DD92 /* UIElementsViewModel.swift */; };
 		856941BD23FFFD9F0052DD92 /* UIElementsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856941BC23FFFD9F0052DD92 /* UIElementsModel.swift */; };
@@ -131,7 +121,6 @@
 		858DC8B223C7629D000041AC /* CustomFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858DC8B023C7629D000041AC /* CustomFunctions.swift */; };
 		858DC8B323C7629D000041AC /* CustomFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858DC8B023C7629D000041AC /* CustomFunctions.swift */; };
 		858DC8B623C895C4000041AC /* MProductDetailViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858DC8B423C895C3000041AC /* MProductDetailViewModelTests.swift */; };
-		85C679F52406443600B14216 /* NavigationBarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C679F42406443600B14216 /* NavigationBarButton.swift */; };
 		85C80D7423FBC8A30045A7E4 /* DataSourceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C80D7323FBC8A30045A7E4 /* DataSourceError.swift */; };
 		85C80D7623FBF26F0045A7E4 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 85C80D7523FBF26E0045A7E4 /* Podfile */; };
 		85C80D7723FBF2AF0045A7E4 /* DataSourceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C80D7323FBC8A30045A7E4 /* DataSourceError.swift */; };
@@ -140,9 +129,6 @@
 		85C80D7F23FC21290045A7E4 /* MockProductsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C80D7E23FC21290045A7E4 /* MockProductsModel.swift */; };
 		85C80D8123FC214D0045A7E4 /* MockProductsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C80D8023FC214D0045A7E4 /* MockProductsViewModel.swift */; };
 		85C80D8523FC22930045A7E4 /* MockProductResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C80D8423FC22930045A7E4 /* MockProductResponse.swift */; };
-		85C80D8823FCFADB0045A7E4 /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C80D8723FCFADB0045A7E4 /* Cache.swift */; };
-		85C80D8923FCFADB0045A7E4 /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C80D8723FCFADB0045A7E4 /* Cache.swift */; };
-		85C80D8A23FCFADB0045A7E4 /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C80D8723FCFADB0045A7E4 /* Cache.swift */; };
 		85C80D8C23FEAC1B0045A7E4 /* ViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C80D8B23FEAC1B0045A7E4 /* ViewState.swift */; };
 		D644A53DC41F1B378D8D195C /* Pods_MVVMStudy_MVVMStudyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B00FE41AB258F2DB57F8173C /* Pods_MVVMStudy_MVVMStudyUITests.framework */; };
 		D8B6CAD51EE49AFC2B78AE46 /* Pods_MVVMStudyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 528FC42C0119F717CC8395F6 /* Pods_MVVMStudyTests.framework */; };
@@ -198,25 +184,7 @@
 		8548F3AB23B37CD200E08E9D /* MProductDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MProductDetailModel.swift; sourceTree = "<group>"; };
 		8548F3AF23B3993D00E08E9D /* NavigationEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationEvent.swift; sourceTree = "<group>"; };
 		8548F3B123B39D8200E08E9D /* BaseMvvMViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseMvvMViewController.swift; sourceTree = "<group>"; };
-		8569419723FFB21A0052DD92 /* Notes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notes.swift; sourceTree = "<group>"; };
-		8569419A23FFBD130052DD92 /* HMAC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMAC.swift; sourceTree = "<group>"; };
 		8569419C23FFBD810052DD92 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		8569419E23FFBF320052DD92 /* SafeUnwrap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafeUnwrap.swift; sourceTree = "<group>"; };
-		856941A123FFC6490052DD92 /* MVVMStudy-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MVVMStudy-Bridging-Header.h"; sourceTree = "<group>"; };
-		856941A223FFC64A0052DD92 /* Encrypter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Encrypter.h; sourceTree = "<group>"; };
-		856941A323FFC64A0052DD92 /* NSData+CommonCrypto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+CommonCrypto.h"; sourceTree = "<group>"; };
-		856941A423FFC64A0052DD92 /* Cipher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cipher.m; sourceTree = "<group>"; };
-		856941A523FFC64A0052DD92 /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64.h"; sourceTree = "<group>"; };
-		856941A623FFC64A0052DD92 /* NSData+AES256.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+AES256.h"; sourceTree = "<group>"; };
-		856941A723FFC64A0052DD92 /* Cipher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cipher.h; sourceTree = "<group>"; };
-		856941A823FFC64A0052DD92 /* Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Base64.m; sourceTree = "<group>"; };
-		856941A923FFC64A0052DD92 /* NSData+AES256.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+AES256.m"; sourceTree = "<group>"; };
-		856941AA23FFC64A0052DD92 /* StringCryptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StringCryptor.m; sourceTree = "<group>"; };
-		856941AB23FFC64A0052DD92 /* Encrypter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Encrypter.m; sourceTree = "<group>"; };
-		856941AC23FFC64A0052DD92 /* NSData+CommonCrypto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+CommonCrypto.m"; sourceTree = "<group>"; };
-		856941AD23FFC64A0052DD92 /* StringCryptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StringCryptor.h; sourceTree = "<group>"; };
-		856941AE23FFC64A0052DD92 /* Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Base64.h; sourceTree = "<group>"; };
-		856941AF23FFC64B0052DD92 /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64.m"; sourceTree = "<group>"; };
 		856941B823FFFD340052DD92 /* UIElementsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIElementsViewController.swift; sourceTree = "<group>"; };
 		856941BA23FFFD910052DD92 /* UIElementsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIElementsViewModel.swift; sourceTree = "<group>"; };
 		856941BC23FFFD9F0052DD92 /* UIElementsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIElementsModel.swift; sourceTree = "<group>"; };
@@ -244,14 +212,12 @@
 		8573463923A9171E00EF36F1 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		858DC8B023C7629D000041AC /* CustomFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFunctions.swift; sourceTree = "<group>"; };
 		858DC8B423C895C3000041AC /* MProductDetailViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MProductDetailViewModelTests.swift; sourceTree = "<group>"; };
-		85C679F42406443600B14216 /* NavigationBarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarButton.swift; sourceTree = "<group>"; };
 		85C80D7323FBC8A30045A7E4 /* DataSourceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSourceError.swift; sourceTree = "<group>"; };
 		85C80D7523FBF26E0045A7E4 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		85C80D7923FBF4360045A7E4 /* MProductsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MProductsViewModelTests.swift; sourceTree = "<group>"; };
 		85C80D7E23FC21290045A7E4 /* MockProductsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockProductsModel.swift; sourceTree = "<group>"; };
 		85C80D8023FC214D0045A7E4 /* MockProductsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockProductsViewModel.swift; sourceTree = "<group>"; };
 		85C80D8423FC22930045A7E4 /* MockProductResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockProductResponse.swift; sourceTree = "<group>"; };
-		85C80D8723FCFADB0045A7E4 /* Cache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cache.swift; sourceTree = "<group>"; };
 		85C80D8B23FEAC1B0045A7E4 /* ViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewState.swift; sourceTree = "<group>"; };
 		8610AD3D376622D4E0C5286A /* Pods-MVVMStudyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVMStudyTests.debug.xcconfig"; path = "Target Support Files/Pods-MVVMStudyTests/Pods-MVVMStudyTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B00FE41AB258F2DB57F8173C /* Pods_MVVMStudy_MVVMStudyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MVVMStudy_MVVMStudyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -381,37 +347,6 @@
 				858DC8B023C7629D000041AC /* CustomFunctions.swift */,
 			);
 			path = Observation;
-			sourceTree = "<group>";
-		};
-		8569419923FFBA100052DD92 /* Chryptography */ = {
-			isa = PBXGroup;
-			children = (
-				856941A023FFC6080052DD92 /* ObjectiveCSources */,
-				8569419A23FFBD130052DD92 /* HMAC.swift */,
-			);
-			path = Chryptography;
-			sourceTree = "<group>";
-		};
-		856941A023FFC6080052DD92 /* ObjectiveCSources */ = {
-			isa = PBXGroup;
-			children = (
-				856941AE23FFC64A0052DD92 /* Base64.h */,
-				856941A823FFC64A0052DD92 /* Base64.m */,
-				856941A723FFC64A0052DD92 /* Cipher.h */,
-				856941A423FFC64A0052DD92 /* Cipher.m */,
-				856941A223FFC64A0052DD92 /* Encrypter.h */,
-				856941AB23FFC64A0052DD92 /* Encrypter.m */,
-				856941A623FFC64A0052DD92 /* NSData+AES256.h */,
-				856941A923FFC64A0052DD92 /* NSData+AES256.m */,
-				856941A523FFC64A0052DD92 /* NSData+Base64.h */,
-				856941AF23FFC64B0052DD92 /* NSData+Base64.m */,
-				856941A323FFC64A0052DD92 /* NSData+CommonCrypto.h */,
-				856941AC23FFC64A0052DD92 /* NSData+CommonCrypto.m */,
-				856941AD23FFC64A0052DD92 /* StringCryptor.h */,
-				856941AA23FFC64A0052DD92 /* StringCryptor.m */,
-				856941A123FFC6490052DD92 /* MVVMStudy-Bridging-Header.h */,
-			);
-			path = ObjectiveCSources;
 			sourceTree = "<group>";
 		};
 		856941B723FFFCE90052DD92 /* UIElements */ = {
@@ -582,11 +517,6 @@
 		85C80D8623FCFA8A0045A7E4 /* Util */ = {
 			isa = PBXGroup;
 			children = (
-				8569419923FFBA100052DD92 /* Chryptography */,
-				85C80D8723FCFADB0045A7E4 /* Cache.swift */,
-				8569419723FFB21A0052DD92 /* Notes.swift */,
-				8569419E23FFBF320052DD92 /* SafeUnwrap.swift */,
-				85C679F42406443600B14216 /* NavigationBarButton.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -864,8 +794,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				8573463423A90D8B00EF36F1 /* BaseWireFrame.swift in Sources */,
-				85C679F52406443600B14216 /* NavigationBarButton.swift in Sources */,
-				856941B223FFC64B0052DD92 /* NSData+AES256.m in Sources */,
 				8548F39F23B0FB0E00E08E9D /* ProductsTableViewAdapter.swift in Sources */,
 				8548F37823AB710300E08E9D /* BasePresenter.swift in Sources */,
 				8548F37223A9F5A300E08E9D /* ProductsInteractor.swift in Sources */,
@@ -873,17 +801,13 @@
 				8573462D23A90BFB00EF36F1 /* ProductsViewController.swift in Sources */,
 				856941B923FFFD340052DD92 /* UIElementsViewController.swift in Sources */,
 				856941BD23FFFD9F0052DD92 /* UIElementsModel.swift in Sources */,
-				856941B423FFC64B0052DD92 /* Encrypter.m in Sources */,
-				8569419F23FFBF320052DD92 /* SafeUnwrap.swift in Sources */,
 				857345F923A2549B00EF36F1 /* ViewController.swift in Sources */,
-				8569419B23FFBD130052DD92 /* HMAC.swift in Sources */,
 				85C80D7423FBC8A30045A7E4 /* DataSourceError.swift in Sources */,
 				8573463123A90D4200EF36F1 /* ProductsWireFrame.swift in Sources */,
 				8548F3A423B370B900E08E9D /* MProductDetailViewController.swift in Sources */,
 				8548F39823AD08FB00E08E9D /* MProductsProtocols.swift in Sources */,
 				856941BB23FFFD910052DD92 /* UIElementsViewModel.swift in Sources */,
 				8548F37623AA669A00E08E9D /* Constants.swift in Sources */,
-				856941B623FFC64B0052DD92 /* NSData+Base64.m in Sources */,
 				857345F523A2549B00EF36F1 /* AppDelegate.swift in Sources */,
 				8573463A23A9171E00EF36F1 /* BaseViewController.swift in Sources */,
 				8573462F23A90C1A00EF36F1 /* ProductsProtocols.swift in Sources */,
@@ -899,18 +823,12 @@
 				8548F3B223B39D8200E08E9D /* BaseMvvMViewController.swift in Sources */,
 				8548F38523ACB11E00E08E9D /* ProductDetailProtocols.swift in Sources */,
 				858DC8B123C7629D000041AC /* CustomFunctions.swift in Sources */,
-				856941B523FFC64B0052DD92 /* NSData+CommonCrypto.m in Sources */,
 				8548F3A823B3712200E08E9D /* BaseModel.swift in Sources */,
 				8548F39623AD08B200E08E9D /* MProductsViewModel.swift in Sources */,
-				856941B123FFC64B0052DD92 /* Base64.m in Sources */,
 				8573463823A9129800EF36F1 /* BaseView.swift in Sources */,
-				8569419823FFB21A0052DD92 /* Notes.swift in Sources */,
-				856941B323FFC64B0052DD92 /* StringCryptor.m in Sources */,
-				85C80D8823FCFADB0045A7E4 /* Cache.swift in Sources */,
 				8548F39423AD088A00E08E9D /* MProductsViewController.swift in Sources */,
 				8548F3A123B35AA700E08E9D /* BaseViewModel.swift in Sources */,
 				8548F38D23ACB15800E08E9D /* ProductDetailInteractor.swift in Sources */,
-				856941B023FFC64B0052DD92 /* Cipher.m in Sources */,
 				8548F38B23ACB14900E08E9D /* ProductDetailPresenter.swift in Sources */,
 				8548F3AC23B37CD200E08E9D /* MProductDetailModel.swift in Sources */,
 				8573463623A9126200EF36F1 /* ProductsPresenter.swift in Sources */,
@@ -947,7 +865,6 @@
 				850FABDA23DAD7EF005E4EA0 /* TestExtensions.swift in Sources */,
 				8573460C23A2549E00EF36F1 /* MVVMStudyTests.swift in Sources */,
 				85C80D7A23FBF4360045A7E4 /* MProductsViewModelTests.swift in Sources */,
-				85C80D8923FCFADB0045A7E4 /* Cache.swift in Sources */,
 				8548F3D123B4C98A00E08E9D /* ProductsWireFrame.swift in Sources */,
 				8548F3C923B4C98000E08E9D /* ProductDetailInteractor.swift in Sources */,
 				8548F3E323B4C99900E08E9D /* BaseWireFrame.swift in Sources */,
@@ -1001,7 +918,6 @@
 				8548F3F623B4C9B500E08E9D /* Constants.swift in Sources */,
 				8548F3BB23B4C97300E08E9D /* ProductsTableViewAdapter.swift in Sources */,
 				8548F3F523B4C9B500E08E9D /* ViewController.swift in Sources */,
-				85C80D8A23FCFADB0045A7E4 /* Cache.swift in Sources */,
 				8548F3CA23B4C98100E08E9D /* ProductDetailProtocols.swift in Sources */,
 				8548F3D423B4C98A00E08E9D /* ProductsProtocols.swift in Sources */,
 				8548F3C323B4C97B00E08E9D /* MProductDetailModel.swift in Sources */,
